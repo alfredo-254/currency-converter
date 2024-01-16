@@ -26,6 +26,8 @@ async function fetchCurrencies() {
       option.text = currency.toUpperCase();
       toDropDown.add(option);
     });
+        fromDropDown.value = 'USD';
+        toDropDown.value = 'EUR';
   } catch (error) {
     console.error("Error fetching currency data:", error);
   }

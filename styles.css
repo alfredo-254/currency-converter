@@ -1,0 +1,77 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: rgb(182, 155, 207);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  h1{
+    text-transform: uppercase;
+  }
+  .app-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wrapper {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  #amount{
+    font-weight: 400;
+    font-size: 1.3em;
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #02002c;
+    color: rgb(182, 155, 207);
+    margin-bottom: 2em;
+    padding: 0.5em;
+  }
+  input#amount:focus{
+    color: rgb(31, 38, 138);
+    border-color: rgb(182, 155, 207);
+    font-weight: 700;
+  }
+  .dropdowns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+
+  }
+  select{
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1em;
+    border-radius: 0.2em;
+    appearance: none;
+
+    background-repeat: no-repeat;
+    background-image: url("arrow-down.svg");
+    background-position: right 15px top 50%, center;
+    background-color: rgb(182, 155, 207);
+    background-size: 20px 20px;
+  }
+  #convert-button{
+    background-color: rgb(182, 155, 207);
+    width: 100%;
+    padding: 1em 0;
+    font-size: 1em;
+    margin-top: 2em;
+    border-radius: 0.3em;
+    color: #fff;
+    font-weight: 600;
+
+  }

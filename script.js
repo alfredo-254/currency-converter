@@ -1,7 +1,7 @@
-// Assuming this code is in a function or an async block
+// Use async functions
 
 let api = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
-//https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur/jpy.json
+
 
 async function fetchCurrencies() {
   try {
@@ -16,6 +16,9 @@ async function fetchCurrencies() {
       const option = document.createElement("option");
       option.value = currency;
       option.text = currency.toUpperCase();
+      if(currency=="usd"){
+        option.selected = "selected";
+      }
       fromDropDown.add(option);
     });
 
@@ -24,11 +27,12 @@ async function fetchCurrencies() {
       const option = document.createElement("option");
       option.value = currency;
       option.text = currency.toUpperCase();
+      if(currency=="kes"){
+        option.selected = "selected";
+      }
       toDropDown.add(option);
     });
-    // setting default value
-      fromDropDown.value = 'USD';
-      toDropDown.value = 'EUR';
+
   } catch (error) {
     console.error("Error fetching currency data:", error);
   }
@@ -58,5 +62,11 @@ async function fetchExchangeRate() {
     console.error("Error fetching currency data:", error);
   }
 }
+
+let resetConverter = () => {
+  location.reload();
+};
+document.querySelector("#reset-button").addEventListener("click", resetConverter);
+
 // Corrected event listener for the "convert" button
 document.querySelector("#convert-button").addEventListener("click", fetchExchangeRate);

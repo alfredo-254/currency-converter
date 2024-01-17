@@ -41,7 +41,7 @@ body {
     padding: 0.5em;
   }
   input#amount:focus{
-    color: rgb(31, 38, 138);
+    color: rgb(49, 202, 18);
     border-color: rgb(182, 155, 207);
     font-weight: 700;
   }
